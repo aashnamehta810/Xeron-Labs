@@ -13,12 +13,13 @@
       <div class="tab-nav-block w-full md:w-1/4">
         <ul class="nav">
           <li class="nav-item" v-for="(item, index) in toxicology" :key="index">
-            <a
+            <button
               :data-id="'#program-' + index"
               @click="tabHandler($event)"
               :class="index === 0 ? 'nav-link active' : 'nav-link'"
-              >{{ item.name }}</a
             >
+              {{ item.name }}
+            </button>
           </li>
         </ul>
       </div>

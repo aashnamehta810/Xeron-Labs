@@ -6,22 +6,21 @@
       <div class="image-box h-[220px] w-full overflow-hidden mb-4">
         <img
           class="w-full h-full object-cover object-top rounded-[20px]"
-          src="/imgs/general_testing.png"
+          :src="service.img"
           alt=""
         />
       </div>
       <div class="content-box px-4">
         <h4 class="w-full text-night text-[26px] font-medium mb-1.5">
-          {{ service }}
+          {{ service.name }}
         </h4>
         <p class="desc text-[16px] text-night opacity-80 mb-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ab
-          maiores consequuntur reiciendis enim quae expedita eligendi quidem
-          repellat quibusdam nihil temporibus aspernatur, molestias accusamus
-          repellendus a, adipisci doloribus in!
+          {{ service.desc }}
         </p>
-        <button
-          class="pdf-btn bg-dark-blue text-white h-[42px] flex items-center gap-1 text-[16px] tracking-[.32px] rounded-md px-6 py-2"
+        <a
+          class="pdf-btn bg-dark-blue text-white h-[42px] inline-flex items-center gap-1 text-[16px] tracking-[.32px] rounded-md px-6 py-2"
+          download
+          :href="service.pdf"
         >
           Download PDF
           <svg
@@ -39,7 +38,7 @@
               stroke-linejoin="round"
             ></path>
           </svg>
-        </button>
+        </a>
       </div>
     </div>
   </div>

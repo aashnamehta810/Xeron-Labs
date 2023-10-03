@@ -15,7 +15,6 @@
           <li class="nav-item" v-for="(item, index) in toxicology" :key="index">
             <a
               :data-id="'#program-' + index"
-              :href="'#program-' + index"
               @click="tabHandler($event)"
               :class="index === 0 ? 'nav-link active' : 'nav-link'"
               >{{ item.name }}</a

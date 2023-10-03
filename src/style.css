@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    @apply font-inter;
+}
+
+@layer components {
+    .cont{
+        @apply flex flex-col w-full mx-auto max-w-[1920px];
+    }
+
+    .nav-width-parent-container{
+        @apply cont px-5 lg:px-[162px] 3xl:px-[260px] ;
+    }
+
+    .hero-width-parent-container{
+        @apply cont px-4 lg:px-[100px] 3xl:px-[178px];
+    }
+
+    .lg-child-container{
+        @apply cont pl-5 pr-3 lg:pl-[120px] lg:pr-[62px] 3xl:pl-[170px]  3xl:pr-[82px];
+    }
+
+    .nav-child{
+        @apply cont pl-5 pr-2 lg:px-[208px] 3xl:px-[340px];
+    }
+    .mobile-nav-child-uneven {
+        @apply cont pl-5 pr-2 lg:px-0;
+    }
+
+    .mobile-nav-child-even {
+        @apply cont px-5 lg:px-0;
+    }
+
+
+    .cta{
+        @apply h-[42px] rounded-[6px] px-[22px] py-[12px] text-[13px] lg:text-[16px] leading-[.32px] flex gap-1 items-center;
+     }
+
+    .h1{
+        @apply -tracking-[.96px] text-[40px] lg:text-[48px] font-naga;
+    }
+
+    .h2{
+        @apply font-naga text-[32px] lg:text-[36px] -tracking-[.72px] text-night;
+    }
+
+    .base{
+        @apply tracking-[0px] text-[18px] opacity-80;
+    }
+
+    .cta-text{
+     @apply text-[16px] tracking-[.32px];
+    }
+
+    .blue-gradient{
+        @apply bg-gradient-to-r from-dark-blue to-light-blue;
+    }
+
+    .dialog-wrapper{
+        @apply absolute inset-0 z-20 w-screen h-screen ;
+    }
+
+    .dialog{
+        @apply flex flex-col border-t-4 rounded-[11px];
+    }
+
+}
+
+.toxicology-tab-block {
+    @apply flex ;
+}
+
+.tab-nav-block .nav-item .nav-link {
+    @apply text-[18px] font-medium text-gray-500 py-1.5 px-5 bg-transparent relative block ;
+    transition: 0.3s all ease-in-out;
+}
+.tab-nav-block .nav-item .nav-link:before {
+    @apply h-[14px] w-[14px] absolute left-0 top-1/2 -translate-y-1/2 opacity-0 invisible ;
+    content: "";
+    background: url(../public/imgs/right-arrow-icon.svg) no-repeat;
+    transition: 0.3s all ease-in-out;
+}
+.tab-nav-block .nav-item .nav-link.active,
+.tab-nav-block .nav-item .nav-link:hover {
+    @apply text-dark-blue ;
+}
+
+.tab-nav-block .nav-item .nav-link.active:before,
+.tab-nav-block .nav-item .nav-link:hover:before {
+    @apply opacity-100 visible ;
+}
+
+.tab-content-block .tab-content .tab-pane {
+    @apply hidden ;
+}
+.tab-content-block .tab-content .tab-pane.active {
+    @apply block ;
+}

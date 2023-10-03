@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="77.992" height="71.074" viewBox="0 0 77.992 71.074">
+  <g id="Stats" transform="translate(-14.004 -19.463)">
+    <path id="Path_2030" data-name="Path 2030" d="M42.768,69H15v9.236H46.111" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_2031" data-name="Path 2031" d="M69.389,69H91v9.236H69.673" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <rect id="Rectangle_545" data-name="Rectangle 545" width="33.043" height="9.237" transform="translate(32.02 35.96) rotate(90)" fill="#1b4acc" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_2032" data-name="Path 2032" d="M42.768,69H39.85V48.68h9.236v9.368" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_2033" data-name="Path 2033" d="M56.914,56.1V20.463H66.15v40.22" fill="#1b4acc" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <rect id="Rectangle_546" data-name="Rectangle 546" width="30.21" height="9.237" transform="translate(83.217 38.794) rotate(90)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <g id="Group_971" data-name="Group 971">
+      <path id="Path_2034" data-name="Path 2034" d="M75.237,83.8a3.362,3.362,0,0,1-4.755,4.755l-7.63-7.63a13.484,13.484,0,0,0,4.756-4.755l7.63,7.63Z" fill="#1b4acc"/>
+      <path id="Path_2035" data-name="Path 2035" d="M60.634,56.889a13.341,13.341,0,0,1,6.974,19.28,13.33,13.33,0,0,1-20.923,2.682,13.329,13.329,0,0,1-1.5-17.061A13.067,13.067,0,0,1,46.685,60a13.318,13.318,0,0,1,13.948-3.113Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_2036" data-name="Path 2036" d="M67.6,76.162l.007.007,7.63,7.63a3.362,3.362,0,0,1-4.755,4.755l-7.63-7.63-.007-.007" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_2037" data-name="Path 2037" d="M56.1,63.419a6.006,6.006,0,0,1,6.007,6.007" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

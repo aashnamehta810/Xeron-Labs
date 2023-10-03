@@ -20,6 +20,7 @@
         <a
           class="pdf-btn bg-dark-blue text-white h-[42px] inline-flex items-center gap-1 text-[16px] tracking-[.32px] rounded-md px-6 py-2"
           download
+          target="_blank"
           :href="service.pdf"
         >
           Download PDF

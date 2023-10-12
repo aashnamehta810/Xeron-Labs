@@ -115,7 +115,7 @@ const contacts = [
   {
     icon: "/imgs/contactus/location_arrow.svg",
     title: "Address",
-    desc: "629 Springfield Rd, Kenilworth/NJ, 07033 <br> 48-25 36th street, Long Island City NY 11101",
+    desc: "<a href='https://maps.app.goo.gl/7Rt97syWCqu24eEh6' target='_blank'>629 Springfield Rd, Kenilworth/NJ, 07033</a>",
   },
 ];
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="hero-width-parent-container lg:nav-width-parent-container mt-[56px]">
+  <div class="hero-width-parent-container lg:nav-width-parent-container">
     <div class="flex flex-col retro-bg bg-right bg-no-repeat bg-contain retro-bg
      mobile-nav-child-even lg:px-[62px] py-[104px] rounded-[20px] relative ">
       <img src="/imgs/state_map.png" alt="" class="absolute top-1/2 right-0 -translate-y-1/2">

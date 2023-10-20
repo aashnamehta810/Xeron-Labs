@@ -1,8 +1,8 @@
 <template>
   <div class="cont bg-[#F8FAFD] lg:mt-[98px]">
-    <div class="hero-width-parent-container lg:pl-[252px] 3xl:pl-[334px] lg:flex-row gap-9 pt-[112px] pb-[84px] items-center">
-      <div class="flex flex-col w-full gap-4 order-2 lg:order-1 pl-5 lg:pl-0">
-        <p class="font-naga text-night text-[30px] lg:text-[60px] -tracking-[1.2px] w-full">Put us to the test.</p>
+    <div class="nav-width-parent-container xl:hero-width-parent-container xl:pl-[252px] 3xl:pl-[334px] 2xl:flex-row gap-9 pt-[112px] pb-[84px] items-start 2xl:items-center">
+      <div class="flex flex-col w-full gap-4 order-2 2xl:order-1 pl-5 lg:pl-0">
+        <p class="font-naga text-night text-[30px] lg:text-[42px] 2xl:text-[60px] -tracking-[1.2px] w-full">Put us to the test.</p>
         <p class="base text-black">
           At our laboratory, we believe that access to comprehensive and reliable testing should be available to
           everyone. That's why we're committed to providing customized services that make it easy and convenient for you
@@ -22,7 +22,7 @@
         </button>
       </div>
       <img
-          class="bg-blue-gradient rounded-[20px] order-1 lg:order-2"
+          class="bg-blue-gradient rounded-[20px] order-1 2xl:order-2"
           src="/imgs/services/handshake.png" alt="">
     </div>
   </div>

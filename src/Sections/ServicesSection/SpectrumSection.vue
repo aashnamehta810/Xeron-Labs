@@ -1,14 +1,7 @@
 <template>
-  <div class="hero-width-parent-container lg:px-[220px] 3xl:px-[302px] lg:mt-[160px]">
-    <p class="h1 mobile-nav-child-uneven lg:mr-0 lg:ml-6">
-      Full Spectrum of Testing Services
-    </p>
-    <p class="base mobile-nav-child-uneven lg:w-8/12 mt-[11px]  lg:ml-6">
-      At Xeron Labs, we offer a wide range of testing services to meet the needs of both providers and patients.
-      Our services include, but not limited to:
-    </p>
+  <div class="nav-width-parent-container xl:hero-width-parent-container xl:px-[220px] 3xl:px-[302px] lg:mt-[137px]">
 
-    <div class="w-full  grid lg:grid-cols-2 mt-[54px] gap-x-[73px] gap-y-[41px]">
+    <div class="w-full  grid lg:grid-cols-2 gap-x-[73px] gap-y-[41px]">
       <trait-cards
           v-for="(item, index) in firstBatch"
           :key="index"
@@ -47,7 +40,7 @@
 
 
     
-    <div class="py-10 lg:mt-[83px] lg:pl-8 w-full flex flex-col lg:flex-row items-center gap-10 lg:gap-[83px]">
+    <div class="py-10 lg:mt-[83px] lg:pl-8 w-full flex flex-col 2xl:flex-row items-start 2xl:items-center gap-10 2xl:gap-[83px]">
       <img :src="drug_item.img" alt="">
       <div class="flex flex-col gap-[11px]">
         <p class="text-[30px]  font-naga text-night -tracking-[.6px]">Drug Screening</p>

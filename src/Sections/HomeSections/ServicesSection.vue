@@ -17,7 +17,7 @@
           @click="router.push('/services')"
           class="hidden lg:inline-flex cta-text text-dark-blue gap-3 items-center self-end cursor-pointer"
         >
-          Learn more
+        View Full Test Directory
           <svg
             aria-hidden="true"
             class="h-[10px]"
@@ -39,13 +39,15 @@
   </div>
 
   <div
-    class="nav-width-parent-container grid grid-cols-2 lg:flex lg:flex-row lg:flex-wrap items-center justify-center gap-y-[40px] bg-white flex-shrink-0"
+    class="nav-width-parent-container bg-white"
   >
-    <services-card
-      v-for="(item, index) in services"
-      :key="index"
-      :service="item"
-    />
+    <div class="flex flex-row flex-wrap items-center justify-start gap-y-[20px] sm:gap-y-[34px] flex-shrink-0 -mx[8px] sm:-mx-[15px]">
+      <services-card
+        v-for="(item, index) in services"
+        :key="index"
+        :service="item"
+      />
+  </div>
   </div>
 
   <div class="hero-width-parent-container">

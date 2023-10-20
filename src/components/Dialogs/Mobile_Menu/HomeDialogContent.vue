@@ -1,65 +1,39 @@
 <template>
-  <div class="flex flex-col px-2">
-    <div class="flex flex-col divide-y-2 mt-8 pl-2">
+  <div class="flex flex-col">
+    <div class="flex flex-col divide-y-[1px] divide-[#D4DBE1] mt-8 pl-10 pr-4">
       <div
           @click="item.action()"
           v-for="item in items"
           :key="item.name"
-          class="py-4 flex items-center justify-between w-full">
-        <p class="font-semibold text-brown"> {{ item.name }}</p>
+          class="py-[18px] flex items-center justify-between w-full">
+        <p class="font-medium text-[#354352] text-xl tracking-[0.4px] leading-[24px]"> {{ item.name }}</p>
 
         <svg
             v-if="item.chevron"
             aria-hidden="true"
-            class="w-6 h-6 text-brown" fill="none" stroke="currentColor" stroke-width="3.5" viewBox="0 0 24 24"
+            class="w-4 h-4 text-[#354352] mr-3" fill="none" stroke="#354352" stroke-width="3.5" viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg">
           <path d="M8.25 4.5l7.5 7.5-7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path>
         </svg>
       </div>
     </div>
 
-    <div class="flex items-center w-full mt-8 justify-between">
-      <button
-          @click="emits('patients')"
-          class="cta text-oil whitespace-nowrap flex items-center gap-1 justify-center bg-teal font-medium">
-        For Patients
-        <svg
-            aria-hidden="true"
-            class="w-3" fill="none" stroke="currentColor" stroke-width="3.5" viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-          <path d="M8.25 4.5l7.5 7.5-7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
+    <div class="flex items-center w-full mt-7 mb-5 px-6 justify-between gap-4">
+      <button class="text-base text-[#354352] tracking-[0.32px] leading-[20px] bg-white w-[168px] h-[60px] rounded-md whitespace-nowrap flex items-center justify-center border border-[#707070]">
+        Lab Results
       </button>
-
-      <button
-          @click="emits('providers')"
-          class="cta text-white whitespace-nowrap flex items-center gap-1 justify-center bg-dark-blue font-medium">
-        For Providers
-        <svg
-            aria-hidden="true"
-            class="w-3" fill="none" stroke="currentColor" stroke-width="3.5" viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-          <path d="M8.25 4.5l7.5 7.5-7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
+      <button class="text-base text-white tracking-[0.32px] leading-[20px] bg-[#0A0A0B] w-[168px] h-[60px] rounded-md text-white whitespace-nowrap flex items-center justify-center">
+        Contact us
       </button>
     </div>
 
-    <div class="flex w-full justify-between mt-8 text-brown items-end">
-      <div class="flex flex-col gap-4">
+    <div class="flex w-full justify-between text-[#030303] items-end bg-[#EEF1F9] pt-9 px-10 pb-10">
+      <div class="mobile-menu-bottom-links block w-full">
         <p
             v-for="item in batch2"
             :key="item.name"
             @click="router.push(item.link)"
-            class="text-sm cursor-pointer">{{ item.name }}</p>
-      </div>
-
-      <div class="flex items-center gap-2">
-        <div
-            target="_blank"
-            v-for="item in socials"
-            :key="item.name"
-            v-html="item.svg"
-            class=""/>
+            class="text-[14px] tracking-[0.28px] leading-[17px] cursor-pointer">{{ item.name }}</p>
       </div>
     </div>
   </div>
@@ -94,6 +68,10 @@ const items = [
   {
     name: "Clients Served",
     action: () => router.push('/clientele')
+  },  
+  {
+    name: "Locations",
+    action: () => router.push('/patients/centers')
   },
 ]
 
@@ -104,12 +82,16 @@ const batch2 = [
     link: "/about/insurances"
   },
   {
-    name: "Careers",
-    link: "/about/careers"
+    name: "Pay a Bill",
+    link: "/dev",
   },
   {
-    name: "Contact Us",
-    link: "/about/contactus"
+    name: "Order Supplies",
+    link: "",
+  },
+  {
+    name: "Courier Pickup",
+    link: "",
   },
 ]
 

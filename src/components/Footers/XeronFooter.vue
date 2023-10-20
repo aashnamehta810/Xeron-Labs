@@ -1,6 +1,6 @@
 <template>
   <div
-    class="nav-width-parent-container grid grid-cols-2 lg:grid-cols-6 gap-[20px] lg:gap-[50px] 3xl:gap-[161px] py-[76px] bg-smoke mt-[53px]"
+    class="nav-width-parent-container grid grid-cols-2 xl:grid-cols-6 gap-[20px] lg:gap-[40px] 3xl:gap-[90px] py-[76px] bg-smoke mt-[53px]"
   >
     <div
       class="footer-bottom-fixed-btn fixed bottom-0 right-0 px-4 py-3 bg-dark-blue text-white rounded-t-xl"
@@ -10,8 +10,8 @@
       >
     </div>
     <div class="flex flex-col col-span-2 lg:col-span-3 order-1 mb-16 lg:mb-0">
-      <img alt="" class="w-[194px]" src="/imgs/logo.png" />
-      <p class="base text-[14px] mt-[38px]">
+      <img alt="" class="w-[134px]" src="/imgs/logo.svg" />
+      <p class="base text-[14px] mt-[38px] max-w-[480px]">
         Xeron Labs is a full-service laboratory that has been serving the
         community for over 20 years. Our team of experienced technicians and
         medical professionals are dedicated to providing you with the highest

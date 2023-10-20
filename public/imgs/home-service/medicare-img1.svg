@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64.682" height="80.377" viewBox="0 0 64.682 80.377">
+  <g id="medicare-img1" transform="translate(-19.659 -12.81)">
+    <g id="Group_994" data-name="Group 994">
+      <path id="Path_2253" data-name="Path 2253" d="M62.259,82.871h-41.6V13.81H59.73a11.6,11.6,0,0,1,11.6,11.6V47.1" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <g id="Group_992" data-name="Group 992">
+        <rect id="Rectangle_2769" data-name="Rectangle 2769" width="24.017" height="7.641" transform="translate(59.324 47.101)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="Path_2254" data-name="Path 2254" d="M62.26,54.743H80.4V83.114a9.077,9.077,0,0,1-9.073,9.073h0a9.077,9.077,0,0,1-9.073-9.073V54.743h0Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <line id="Line_114" data-name="Line 114" x2="32.485" transform="translate(29.775 33.479)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="Line_115" data-name="Line 115" x2="20.468" transform="translate(29.775 41.876)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <g id="Group_993" data-name="Group 993">
+        <path id="Path_2255" data-name="Path 2255" d="M29.775,68.441V53.34h7.033a3.2,3.2,0,0,1,3.2,3.2h0a3.2,3.2,0,0,1-3.2,3.2H29.775L43.393,73.36" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <line id="Line_116" data-name="Line 116" x1="9.908" y2="9.907" transform="translate(33.433 63.454)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+    <g id="Group_995" data-name="Group 995">
+      <path id="Path_2256" data-name="Path 2256" d="M80.4,75.26v7.85a9.07,9.07,0,1,1-18.14,0V71.42a17.613,17.613,0,0,1,7.51,2.04A16.674,16.674,0,0,0,80.4,75.26Z" fill="#1b4acc"/>
+      <circle id="Ellipse_55" data-name="Ellipse 55" cx="2.869" cy="2.869" r="2.869" transform="translate(71.333 65.681)" fill="#1b4acc"/>
+      <circle id="Ellipse_56" data-name="Ellipse 56" cx="1.674" cy="1.674" r="1.674" transform="translate(65.734 62.811)" fill="#1b4acc"/>
+    </g>
+    <rect id="Rectangle_2770" data-name="Rectangle 2770" width="16.221" height="6.07" transform="translate(29.775 20.632)" fill="#1b4acc" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

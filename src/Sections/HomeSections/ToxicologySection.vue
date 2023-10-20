@@ -12,7 +12,7 @@
     <div class="toxicology-tab-block w-full -mx-4">
       <div class="tab-nav-block w-full md:w-1/4">
         <ul class="nav">
-          <li class="nav-item" v-for="(item, index) in toxicology" :key="index">
+          <li class="nav-item" v-for="(item, index) in servicesTabs" :key="index">
             <button
               :data-id="'#program-' + index"
               @click="tabHandler($event)"
@@ -26,7 +26,7 @@
       <div class="tab-content-block w-full md:w-3/4">
         <div class="tab-content">
           <div
-            v-for="(item, index) in toxicology"
+            v-for="(item, index) in servicesTabs"
             :key="index"
             :class="['tab-pane', index === 0 ? 'active' : '']"
             :id="'program-' + index"
@@ -90,7 +90,7 @@
 
 <script setup>
 import { useRouter } from "vue-router";
-import { toxicology } from "@/data/toxicology.js";
+import { servicesTabs } from "@/data/servicesTabs.js";
 const router = useRouter();
 const tabHandler = (e) => {
   const tabPanes = document.querySelectorAll(".tab-pane");

@@ -1,8 +1,8 @@
 <template>
-  <div class="hero-width-parent-container pt-[153px] pb-[100px]">
+  <div class="hero-width-parent-container pt-[95px] pb-[56px]">
     <div class="lg-child-container">
-      <div class="flex items-start justify-between">
-        <div class="flex flex-col gap-[2px] lg:w-6/12">
+      <div class="flex flex-wrap flex-col text-center items-center">
+        <div class="flex flex-col gap-y-3.5 lg:w-6/12 mb-7">
           <p class="h2 text-night w-full">Insurance Accepted</p>
           <p class="base">
             We accept most insurance plans and work with a variety of providers to ensure that our patients
@@ -10,7 +10,7 @@
           </p>
         </div>
         <button
-            class="hidden lg:flex cta bg-dark-blue text-white w-40  justify-between"
+            class="hidden lg:flex cta bg-dark-blue text-white w-40  justify-center gap-x-4"
             @click="router.push('/about/insurances')">
           See all
           <svg

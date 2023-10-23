@@ -78,7 +78,7 @@ body{
 }
 
 .tab-nav-block .nav-item:not(:last-child) {
-    @apply mb-4;
+    @apply md:mb-4;
 }
 .tab-nav-block .nav-item .nav-link {
     @apply text-[18px] font-medium text-[#070606] tracking-[0.36px] leading-[21px] py-1.5 px-5 bg-[#EEF2FF] relative flex items-center justify-between w-full min-h-[50px] rounded-[9px];
@@ -140,6 +140,52 @@ body{
     margin-bottom: 29px;
 }
 
+
+@media (max-width: 767px) {
+    .tabs-container {
+        position: relative;
+        height: 50px;
+    }
+    .tabs-container .nav-box {
+        position: absolute;
+        width: 100%;
+    }
+
+    .tabs-container .nav-box .nav.expanded .nav-item:not(:last-child) {
+        @apply mb-4;
+    }
+
+    .tabs-container .nav-box .nav.expanded {
+        background-color: #fff;
+        padding-bottom: 20px;
+        position: relative;
+    }
+
+    .tabs-container .nav-box .nav.expanded:before {
+        content: "";
+        height: 100%;
+        width: calc(100% + 20px);
+        top: 0;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        background-color: #fff;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.15);
+        border-radius: 0 0 10px 10px;
+    }
+
+    .tabs-container .nav-box .nav li > *:not(.active) {
+        position: absolute;
+        top: -999em;
+    }
+    .tabs-container .nav-box .nav li > *.active {
+        position: relative;
+    }
+    .tabs-container .nav-box .nav.expanded li > *:not(.active) {
+        position: relative;
+        top: auto;
+    }
+}
 
 @media (max-width: 450px) {
     .custom-service-card-box {

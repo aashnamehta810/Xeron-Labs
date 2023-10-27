@@ -56,6 +56,7 @@
                     :data-id="'#program-' + index"
                     @click="tabHandler($event)"
                     :class="index === 0 ? 'nav-link active' : 'nav-link'"
+                    :data-tab="item.link"
                   >
                     {{ item.name }}
                     <svg
@@ -106,6 +107,7 @@
               :key="index"
               :class="['tab-pane', index === 0 ? 'active' : '']"
               :id="'program-' + index"
+              :data-tab="item.link"
             >
               <div class="tab-desc-block flex flex-wrap">
                 <div class="flex flex-wrap md:flex-nowrap xl:gap-[10px] -mx-4">
@@ -174,7 +176,29 @@
 
 import { useRouter } from "vue-router";
 import { servicesTabs } from "@/data/servicesTabs.js";
+import { onMounted } from "vue";
 const router = useRouter();
+const tabVal = router.currentRoute.value.query.tab;
+
+onMounted(() => {
+  if (tabVal) {
+    const tabPanes = document.querySelectorAll(".tab-pane");
+    tabPanes.forEach((tabPane) => {
+      tabPane.classList.remove("active");
+      if (tabPane.getAttribute("data-tab") === tabVal) {
+        tabPane.classList.add("active");
+      }
+    });
+    const navLink = document.querySelectorAll(".nav-link");
+    navLink.forEach((navLink) => {
+      navLink.classList.remove("active");
+      if (navLink.getAttribute("data-tab") === tabVal) {
+        navLink.classList.add("active");
+      }
+    });
+  }
+});
+
 const tabHandler = (e) => {
   const tabPanes = document.querySelectorAll(".tab-pane");
   tabPanes.forEach((tabPane) => {

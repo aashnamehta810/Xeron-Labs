@@ -1,6 +1,6 @@
 <template>
   <div
-    class="nav-width-parent-container xl:hero-width-parent-container xl:px-[220px] 3xl:px-[302px] py-[72px] items-center bg-white"
+    class="nav-width-parent-container xl:hero-width-parent-container xl:px-[220px] 3xl:px-[302px] py-[72px] items-center bg-white scrollTarget"
   >
     <div class="w-full mb-20 2xl:px-[30px]">
       <p class="tracking-[3.08px] text-dark-blue text-[14px] font-medium">
@@ -176,11 +176,12 @@
 
 import { useRouter } from "vue-router";
 import { servicesTabs } from "@/data/servicesTabs.js";
-import { onMounted } from "vue";
+import { onMounted, ref, nextTick } from "vue";
 const router = useRouter();
 const tabVal = router.currentRoute.value.query.tab;
 
 onMounted(() => {
+  const targetElement = document.querySelector(".scrollTarget");
   if (tabVal) {
     const tabPanes = document.querySelectorAll(".tab-pane");
     tabPanes.forEach((tabPane) => {
@@ -196,6 +197,11 @@ onMounted(() => {
         navLink.classList.add("active");
       }
     });
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
   }
 });
 

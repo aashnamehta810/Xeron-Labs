@@ -51,6 +51,21 @@ const routes = [
     name: "dev",
     component: () => import("@/pages/UnderDevelopment.vue"),
   },
+  {
+    path: "/privacy-policy",
+    name: "Privacy Policy",
+    component: () => import("@/pages/PrivacyPolicy.vue"),
+  },
+  {
+    path: "/terms-conditions",
+    name: "Terms",
+    component: () => import("@/pages/TermsConditions.vue"),
+  },
+  {
+    path: "/accessibility-notice",
+    name: "Accessibility Notice",
+    component: () => import("@/pages/AccessibilityNotice.vue"),
+  },
 ];
 
 const router = createRouter({

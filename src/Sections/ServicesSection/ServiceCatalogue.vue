@@ -176,11 +176,22 @@
 
 import { useRouter } from "vue-router";
 import { servicesTabs } from "@/data/servicesTabs.js";
-import { onMounted, ref, nextTick } from "vue";
+import { ref, watch, onMounted } from "vue";
 const router = useRouter();
 const tabVal = router.currentRoute.value.query.tab;
 
+watch(
+  () => router.currentRoute.value.query.tab,
+  (newQuery, oldQuery) => {
+    handleQueryChange(newQuery);
+  }
+);
+
 onMounted(() => {
+  handleQueryChange(tabVal);
+});
+
+const handleQueryChange = (tabVal) => {
   const targetElement = document.querySelector(".scrollTarget");
   if (tabVal) {
     const tabPanes = document.querySelectorAll(".tab-pane");
@@ -203,7 +214,7 @@ onMounted(() => {
       });
     }
   }
-});
+};
 
 const tabHandler = (e) => {
   const tabPanes = document.querySelectorAll(".tab-pane");

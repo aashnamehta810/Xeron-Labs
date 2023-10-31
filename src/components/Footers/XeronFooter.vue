@@ -5,7 +5,7 @@
     <div
       class="footer-bottom-fixed-btn fixed bottom-0 right-0 px-4 py-3 bg-dark-blue text-white rounded-t-xl"
     >
-      <a href="javascript:void(0);" class="connect-rep-btn"
+      <a @click="router.push('/about/contactus')" class="connect-rep-btn"
         >Connect with a rep</a
       >
     </div>
@@ -117,9 +117,13 @@
       <div
         class="lg:order-2 flex justify-between lg:gap-[42px] lg:items-center lg:ml-auto whitespace-nowrap pb-4 lg:pb-0"
       >
-        <p class="">Privacy Policy</p>
-        <p class="">Terms & Conditions</p>
-        <p class="">Accessibility Notice</p>
+        <p class="" @click="router.push('/privacy-policy')">Privacy Policy</p>
+        <p class="" @click="router.push('/terms-conditions')">
+          Terms & Conditions
+        </p>
+        <p class="" @click="router.push('/accessibility-notice')">
+          Accessibility Notice
+        </p>
       </div>
       <div class="flex lg:order-1 pt-4 lg:pb-0">
         © 2023 Xeron Clinical Laboratories. All Rights Reserved.
@@ -140,11 +144,11 @@ const companies = [
   },
   {
     name: "About us",
-    url: "/about",
+    url: "/about/values",
   },
   {
     name: "Our values",
-    url: "/about",
+    url: "/about/values",
   },
   {
     name: "Insurances",
@@ -163,35 +167,35 @@ const companies = [
 const services = [
   {
     name: "General Testing",
-    url: "/services",
+    url: "/services/?tab=general-testing",
   },
   {
-    name: "Toxicology",
-    url: "/services",
+    name: "Andrology",
+    url: "/services/?tab=andrology",
   },
   {
     name: "Cytology",
-    url: "/services",
+    url: "/services/?tab=cytology",
   },
   {
     name: "Chemistry",
-    url: "/services",
+    url: "/services/?tab=chemistry",
   },
   {
     name: "Hematology",
-    url: "/services",
+    url: "/services/?tab=hematology",
   },
   {
-    name: "Virology",
-    url: "/services",
+    name: "Molecular Virology",
+    url: "/services/?tab=molecular-virology",
   },
   {
     name: "Endocrinology",
-    url: "/services",
+    url: "/services/?tab=endocrinology",
   },
   {
     name: "Serology",
-    url: "/services",
+    url: "/services/?tab=serology",
   },
 ];
 

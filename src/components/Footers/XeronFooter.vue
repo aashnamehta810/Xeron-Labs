@@ -5,7 +5,10 @@
     <div
       class="footer-bottom-fixed-btn fixed bottom-0 right-0 px-4 py-3 bg-dark-blue text-white rounded-t-xl"
     >
-      <a @click="router.push('/about/contactus')" class="connect-rep-btn"
+      <a
+        href="javascript:void(0)"
+        @click="router.push('/about/contactus')"
+        class="connect-rep-btn"
         >Connect with a rep</a
       >
     </div>
@@ -117,11 +120,13 @@
       <div
         class="lg:order-2 flex justify-between lg:gap-[42px] lg:items-center lg:ml-auto whitespace-nowrap pb-4 lg:pb-0"
       >
-        <p class="" @click="router.push('/privacy-policy')">Privacy Policy</p>
-        <p class="" @click="router.push('/terms-conditions')">
+        <p class="cursor-pointer" @click="router.push('/privacy-policy')">
+          Privacy Policy
+        </p>
+        <p class="cursor-pointer" @click="router.push('/terms-conditions')">
           Terms & Conditions
         </p>
-        <p class="" @click="router.push('/accessibility-notice')">
+        <p class="cursor-pointer" @click="router.push('/accessibility-notice')">
           Accessibility Notice
         </p>
       </div>

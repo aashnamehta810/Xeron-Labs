@@ -1,6 +1,6 @@
 <template>
   <div
-    class="nav-width-parent-container xl:hero-width-parent-container xl:px-[220px] 3xl:px-[302px] py-[72px] items-center bg-white scrollTarget"
+    class="nav-width-parent-container xl:hero-width-parent-container xl:px-[220px] 3xl:px-[302px] py-[72px] items-center bg-white"
   >
     <div class="w-full mb-20 2xl:px-[30px]">
       <p class="tracking-[3.08px] text-dark-blue text-[14px] font-medium">
@@ -109,7 +109,57 @@
               :id="'program-' + index"
               :data-tab="item.link"
             >
-              <div class="tab-desc-block flex flex-wrap">
+              <div
+                @click="mobHandler($event)"
+                class="responsive-header md:hidden"
+                :id="'mob-' + index"
+              >
+                <button
+                  :data-id="'#program-' + index"
+                  @click="tabHandler($event)"
+                  :class="index === 0 ? 'nav-link active' : 'nav-link'"
+                  :data-tab="item.link"
+                >
+                  {{ item.name }}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15.65"
+                    height="16.478"
+                    viewBox="0 0 15.65 16.478"
+                  >
+                    <g
+                      id="Icon_feather-arrow-right"
+                      data-name="Icon feather-arrow-right"
+                      transform="translate(-6.5 -6.086)"
+                    >
+                      <path
+                        id="Path_2251"
+                        data-name="Path 2251"
+                        d="M7.5,18H21.15"
+                        transform="translate(0 -3.675)"
+                        fill="none"
+                        stroke="#fff"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <path
+                        id="Path_2252"
+                        data-name="Path 2252"
+                        d="M18,7.5l6.825,6.825L18,21.15"
+                        transform="translate(-3.675)"
+                        fill="none"
+                        stroke="#fff"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
+                </button>
+              </div>
+
+              <div class="tab-desc-block flex flex-wrap p-5 pb-10 md:p-0">
                 <div class="flex flex-wrap md:flex-nowrap xl:gap-[10px] -mx-4">
                   <div class="w-full md:w-auto px-4">
                     <p class="heading text-[30px] text-night mb-2">
@@ -213,6 +263,16 @@ const handleQueryChange = (tabVal) => {
         behavior: "smooth",
       });
     }
+  }
+};
+
+const mobHandler = (event) => {
+  const tabID = event.currentTarget.getAttribute("id");
+  const targetElement = document.querySelector("#" + tabID);
+  if (targetElement) {
+    targetElement.scrollIntoView({
+      behavior: "smooth",
+    });
   }
 };
 

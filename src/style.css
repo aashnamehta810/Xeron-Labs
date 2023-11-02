@@ -74,11 +74,13 @@ body {
 .tab-nav-block .nav-item:not(:last-child) {
   @apply md:mb-4;
 }
-.tab-nav-block .nav-item .nav-link {
+.tab-nav-block .nav-item .nav-link,
+.tab-content-block .tab-content .tab-pane .responsive-header .nav-link {
   @apply text-[18px] font-medium text-[#070606] tracking-[0.36px] leading-[21px] py-1.5 px-5 bg-[#EEF2FF] relative flex items-center justify-between w-full min-h-[50px] rounded-[9px];
   transition: 0.3s all ease-in-out;
 }
-.tab-nav-block .nav-item .nav-link svg {
+.tab-nav-block .nav-item .nav-link svg,
+.tab-content-block .tab-content .tab-pane .responsive-header .nav-link svg {
   @apply opacity-0 invisible;
   transition: 0.3s all ease-in-out;
 }
@@ -89,25 +91,60 @@ body {
     transition: 0.3s all ease-in-out;
 } */
 .tab-nav-block .nav-item .nav-link.active,
-.tab-nav-block .nav-item .nav-link:hover {
+.tab-nav-block .nav-item .nav-link:hover,
+.tab-content-block .tab-content .tab-pane .responsive-header .nav-link.active,
+.tab-content-block .tab-content .tab-pane .responsive-header .nav-link:hover {
   @apply bg-dark-blue text-white;
 }
 
 .tab-nav-block .nav-item .nav-link.active svg,
-.tab-nav-block .nav-item .nav-link:hover svg {
+.tab-nav-block .nav-item .nav-link:hover svg,
+.tab-content-block
+  .tab-content
+  .tab-pane
+  .responsive-header
+  .nav-link.active
+  svg,
+.tab-content-block
+  .tab-content
+  .tab-pane
+  .responsive-header
+  .nav-link:hover
+  svg {
   @apply opacity-100 visible;
 }
 
 .tab-nav-block .nav-item .nav-link.active:before,
-.tab-nav-block .nav-item .nav-link:hover:before {
+.tab-nav-block .nav-item .nav-link:hover:before,
+.tab-content-block
+  .tab-content
+  .tab-pane
+  .responsive-header
+  .nav-link.active:before,
+.tab-content-block
+  .tab-content
+  .tab-pane
+  .responsive-header
+  .nav-link:hover:before {
   @apply opacity-100 visible;
 }
 
 .tab-content-block .tab-content .tab-pane {
-  @apply hidden;
+  /* @apply hidden; */
+}
+.tab-content-block .tab-content .tab-pane:not(:last-child) {
+  @apply mb-4 md:mb-0;
 }
 .tab-content-block .tab-content .tab-pane.active {
   @apply block;
+}
+
+.tab-content-block .tab-content .tab-pane .tab-desc-block {
+  @apply hidden;
+}
+
+.tab-content-block .tab-content .tab-pane.active .tab-desc-block {
+  @apply flex;
 }
 
 .header-top-bar a {
@@ -136,10 +173,11 @@ body {
 
 @media (max-width: 767px) {
   .tabs-container {
-    position: relative;
-    height: 50px;
+    /* position: relative;
+    height: 50px; */
+    display: none;
   }
-  .tabs-container .nav-box {
+  /* .tabs-container .nav-box {
     position: absolute;
     width: 100%;
   }
@@ -177,7 +215,7 @@ body {
   .tabs-container .nav-box .nav.expanded li > *:not(.active) {
     position: relative;
     top: auto;
-  }
+  } */
 }
 
 @media (max-width: 450px) {

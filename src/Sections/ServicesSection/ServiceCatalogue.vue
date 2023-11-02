@@ -1,6 +1,6 @@
 <template>
   <div
-    class="nav-width-parent-container xl:hero-width-parent-container xl:px-[220px] 3xl:px-[302px] py-[72px] items-center bg-white"
+    class="nav-width-parent-container xl:hero-width-parent-container xl:px-[220px] 3xl:px-[302px] py-[72px] items-center bg-white scrollTarget"
   >
     <div class="w-full mb-20 2xl:px-[30px]">
       <p class="tracking-[3.08px] text-dark-blue text-[14px] font-medium">
@@ -110,9 +110,9 @@
               :data-tab="item.link"
             >
               <div
-                @click="mobHandler($event)"
                 class="responsive-header md:hidden"
                 :id="'mob-' + index"
+                @click="mobHandler($event)"
               >
                 <button
                   :data-id="'#program-' + index"
@@ -158,7 +158,6 @@
                   </svg>
                 </button>
               </div>
-
               <div class="tab-desc-block flex flex-wrap p-5 pb-10 md:p-0">
                 <div class="flex flex-wrap md:flex-nowrap xl:gap-[10px] -mx-4">
                   <div class="w-full md:w-auto px-4">
@@ -266,13 +265,15 @@ const handleQueryChange = (tabVal) => {
   }
 };
 
-const mobHandler = (event) => {
-  const tabID = event.currentTarget.getAttribute("id");
-  const targetElement = document.querySelector("#" + tabID);
-  if (targetElement) {
-    targetElement.scrollIntoView({
-      behavior: "smooth",
-    });
+const mobHandler = (e) => {
+  const tabID = e.currentTarget.getAttribute("id");
+  if (tabID) {
+    const targetElement = document.querySelector("#" + tabID);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
   }
 };
 

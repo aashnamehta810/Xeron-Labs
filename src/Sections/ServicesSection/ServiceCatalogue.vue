@@ -272,6 +272,7 @@ const mobHandler = (e) => {
     if (targetElement) {
       targetElement.scrollIntoView({
         behavior: "smooth",
+        block: "center",
       });
     }
   }

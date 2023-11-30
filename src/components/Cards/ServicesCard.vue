@@ -4,7 +4,7 @@
   >
     <a
       :href="'/services/?tab=' + service.link"
-      class="flex items-center justify-end flex-col h-[230px] rounded-[9px] bg-[#EEF2FF] px-[20px] py-[46px] text-center"
+      class="flex items-center justify-center flex-col h-[230px] rounded-[9px] bg-[#EEF2FF] px-[20px] py-[46px] text-center"
     >
       <span class="image-box mb-4 block">
         <img class="" :src="service.img" alt="" />

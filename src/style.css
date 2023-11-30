@@ -171,6 +171,10 @@ body {
   margin-bottom: 29px;
 }
 
+.custom-service-card-box .image-box img {
+  height: 70px;
+}
+
 @media (max-width: 767px) {
   .tabs-container {
     /* position: relative;

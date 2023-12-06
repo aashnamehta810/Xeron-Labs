@@ -7,7 +7,9 @@
         OUR SERVICES
       </p>
       <p class="h1 text-night mt-[50px]">Full Spectrum of Testing Services</p>
-      <div class="flex items-center w-full justify-between">
+      <div
+        class="flex items-center w-full justify-between flex-col lg:flex-row"
+      >
         <p class="inline-flex base lg:max-w-[60%] opacity-80">
           At Xeron Labs, we offer a wide range of testing services to meet the
           needs of both providers and patients. Our services include, but not
@@ -15,9 +17,9 @@
         </p>
         <div
           @click="router.push('/services')"
-          class="hidden lg:inline-flex cta-text text-dark-blue gap-3 items-center self-end cursor-pointer"
+          class="flex lg:inline-flex cta-text text-dark-blue gap-3 items-center self-start lg:self-end cursor-pointer pt-4 lg:pt-0"
         >
-        View Full Test Directory
+          View Full Test Directory
           <svg
             aria-hidden="true"
             class="h-[10px]"
@@ -38,16 +40,16 @@
     </div>
   </div>
 
-  <div
-    class="nav-width-parent-container bg-white"
-  >
-    <div class="flex flex-row flex-wrap items-center justify-start gap-y-[20px] sm:gap-y-[34px] flex-shrink-0 -mx[8px] sm:-mx-[15px]">
+  <div class="nav-width-parent-container bg-white">
+    <div
+      class="flex flex-row flex-wrap items-center justify-start gap-y-[20px] sm:gap-y-[34px] flex-shrink-0 -mx[8px] sm:-mx-[15px]"
+    >
       <services-card
         v-for="(item, index) in services"
         :key="index"
         :service="item"
       />
-  </div>
+    </div>
   </div>
 
   <div class="hero-width-parent-container">

@@ -2,12 +2,14 @@
   <div
     class="nav-width-parent-container xl:hero-width-parent-container xl:px-[220px] 3xl:px-[302px] py-[72px] items-center bg-white scrollTarget"
   >
-    <div class="w-full mb-20 2xl:px-[30px]">
+    <div class="w-full mb-0 lg:mb-20 2xl:px-[30px]">
       <p class="tracking-[3.08px] text-dark-blue text-[14px] font-medium">
         OUR SERVICES
       </p>
       <p class="h1 text-night mt-[50px]">Full Spectrum of Testing Services</p>
-      <div class="flex items-center w-full justify-between">
+      <div
+        class="flex items-center w-full justify-between flex-col lg:flex-row"
+      >
         <p class="inline-flex base lg:max-w-[60%] opacity-80">
           At Xeron Labs, we offer a wide range of testing services to meet the
           needs of both providers and patients. Our services include, but not
@@ -15,7 +17,7 @@
         </p>
         <div
           @click="router.push('/services')"
-          class="hidden lg:inline-flex cta-text text-dark-blue gap-3 items-center self-end cursor-pointer"
+          class="flex lg:inline-flex cta-text text-dark-blue gap-3 items-center self-start lg:self-end cursor-pointer pt-4 lg:pt-0"
         >
           View Full Test Directory
           <svg

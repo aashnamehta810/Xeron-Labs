@@ -15,8 +15,9 @@
           needs of both providers and patients. Our services include, but not
           limited to:
         </p>
-        <div
-          @click="router.push('/services')"
+        <a
+          href="/files/XeronDirectory2023.pdf"
+          target="_blank"
           class="flex lg:inline-flex cta-text text-dark-blue gap-3 items-center self-start lg:self-end cursor-pointer pt-4 lg:pt-0"
         >
           View Full Test Directory
@@ -35,7 +36,7 @@
               stroke-linejoin="round"
             ></path>
           </svg>
-        </div>
+        </a>
       </div>
     </div>
 

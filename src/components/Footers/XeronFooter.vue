@@ -105,7 +105,7 @@
         For Patients
       </p>
       <p
-        @click="router.push(item.url)"
+        @click="openInNewTab(item.url, item.target)"
         v-for="(item, index) in forPatients"
         :key="index"
         class="tracking-[.28px] text-[14px] text-charcoal cursor-pointer"
@@ -141,6 +141,9 @@
 import { useRouter } from "vue-router";
 
 const router = useRouter();
+const openInNewTab = (url, target) => {
+  window.open(url, target);
+};
 
 const companies = [
   {
@@ -223,22 +226,27 @@ const forPatients = [
   {
     name: "Covid Test Results",
     url: "/covid",
+    target: "_self",
   },
   {
     name: "Patients Centers Locations",
     url: "/patients/centers",
+    target: "_self",
   },
   {
     name: "Patient information",
     url: "/dev",
+    target: "_self",
   },
   {
     name: "Pay a Bill",
     url: "/dev",
+    target: "_self",
   },
   {
     name: "Patient Sign in",
-    url: "/dev",
+    url: "https://xeronpatient.safemedicaldata.com/",
+    target: "_blank",
   },
 ];
 </script>

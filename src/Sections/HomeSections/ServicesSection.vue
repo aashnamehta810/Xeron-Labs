@@ -98,7 +98,7 @@
         Quick Actions
       </p>
       <div
-        @click="router.push('/dev')"
+        @click="openInNewTab(items.url, items.target)"
         v-for="(items, index) in quickActions"
         :key="index"
         :class="[
@@ -106,7 +106,7 @@
         ]"
         class="text-light-blue py-[27px] flex w-full justify-between font-medium cursor-pointer"
       >
-        {{ items }}
+        {{ items.name }}
         <svg
           aria-hidden="true"
           class="w-[19px] h-[19px]"
@@ -133,11 +133,30 @@ import { services } from "@/data/services.js";
 import { useRouter } from "vue-router";
 
 const router = useRouter();
+const openInNewTab = (url, target) => {
+  window.open(url, target);
+};
 const quickActions = [
-  "Order Supplies",
-  "Test Menu",
-  "Provider Sign in",
-  "Patient Sign in",
+  {
+    name: "Order Supplies",
+    url: "/dev",
+    target: "_self",
+  },
+  {
+    name: "Test Menu",
+    url: "/dev",
+    target: "_self",
+  },
+  {
+    name: "Provider Sign in",
+    url: "/dev",
+    target: "_self",
+  },
+  {
+    name: "Patient Sign in",
+    url: "https://xeronpatient.safemedicaldata.com/",
+    target: "_blank",
+  },
 ];
 const navigateToPDF = () => {
   // Use router.push to navigate to the PDF link

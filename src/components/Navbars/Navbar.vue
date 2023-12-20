@@ -1,15 +1,19 @@
 <template>
   <div class="header-main-block flex flex-col">
     <div class="nav-width-parent-container bg-[#1B4ACC] hidden xl:block">
-      <div class="header-top-bar flex items-center justify-end text-right text-white min-h-[44px] py-2">
-        <div class="flex items-center justify-end flex-wrap gap-y-[14px] gap-x-[34px] ml-auto">
+      <div
+        class="header-top-bar flex items-center justify-end text-right text-white min-h-[44px] py-2"
+      >
+        <div
+          class="flex items-center justify-end flex-wrap gap-y-[14px] gap-x-[34px] ml-auto"
+        >
           <router-link
             v-for="(item, index) in navTopLinks"
             :key="index"
             :to="item.link"
             @click="item.handler"
           >
-          {{ item.text }}
+            {{ item.text }}
           </router-link>
         </div>
       </div>
@@ -31,7 +35,10 @@
         Menu
       </button>
       <div class="hidden xl:flex items-center w-full gap-[20px]">
-        <div ref="navRef" class="flex items-center gap-[20px] xl:gap-[20px] 2xl:gap-[30px] mr-auto">
+        <div
+          ref="navRef"
+          class="flex items-center gap-[20px] xl:gap-[20px] 2xl:gap-[30px] mr-auto"
+        >
           <router-link
             v-for="(item, index) in navLinks"
             :key="index"
@@ -92,10 +99,13 @@
             class="text-[14px] tracking-[.32px] whitespace-nowrap flex gap-1 items-center text-charcoal relative"
             @click="item.handler"
           >
-          {{ item.text }}
+            {{ item.text }}
           </router-link>
-          
-          <button class="text-base tracking-[0.32px] leading-[20px] bg-[#0A0A0B] w-[149px] h-[50px] rounded-md text-white whitespace-nowrap flex items-center justify-center">
+
+          <button
+            @click="router.push('/about/contactus')"
+            class="text-base tracking-[0.32px] leading-[20px] bg-[#0A0A0B] w-[149px] h-[50px] rounded-md text-white whitespace-nowrap flex items-center justify-center"
+          >
             Contact us
           </button>
           <!-- <button

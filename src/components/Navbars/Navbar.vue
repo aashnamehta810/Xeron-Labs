@@ -95,9 +95,10 @@
           <router-link
             v-for="(item, index) in navSecondNavLinks"
             :key="index"
-            :to="item.link"
+            :to="{ path: item.link }"
             class="text-[14px] tracking-[.32px] whitespace-nowrap flex gap-1 items-center text-charcoal relative"
-            @click="item.handler"
+            @click="openInNewTab(item.link)"
+            target="_blank"
           >
             {{ item.text }}
           </router-link>
@@ -244,6 +245,10 @@ const handleAboutClick = () => {
   state.isAboutDialogOpen = !state.isAboutDialogOpen;
 };
 
+const openInNewTab = (url, target) => {
+  window.open(url, "_blank");
+};
+
 const navLinks = [
   {
     text: "Home",
@@ -304,7 +309,12 @@ const navTopLinks = [
 const navSecondNavLinks = [
   {
     text: "Lab Results",
-    link: "/dev",
+    link: "https://xeronpatient.safemedicaldata.com/",
+    handler: "",
+  },
+  {
+    text: "Patient Sign in",
+    link: "https://xeronpatient.safemedicaldata.com/",
     handler: "",
   },
 ];

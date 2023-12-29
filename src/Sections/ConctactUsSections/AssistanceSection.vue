@@ -45,38 +45,6 @@
         If you have any questions, concerns, or comments, please fill out the
         contact form below.
       </p>
-      <xeron-input
-        v-model="state.name"
-        label="First Name"
-        placeholder="First Name"
-      />
-      <xeron-input
-        v-model="state.name"
-        label="Last Name"
-        placeholder="Last Name"
-      />
-      <xeron-input
-        v-model="state.email"
-        label="Email*"
-        placeholder="john@example.com"
-        type="email"
-      />
-      <xeron-input
-        v-model="state.phone"
-        label="Phone"
-        placeholder="1-888-555-8786"
-        type="tel"
-      />
-      <xeron-text-area
-        v-model="state.bio"
-        label="Message*"
-        placeholder="Type your message"
-      />
-      <button
-        class="cta bg-dark-blue text-center items-center text-white w-full flex flex-row justify-center h-[61px] mt-[21px]"
-      >
-        Submit
-      </button>
     </div>
   </div>
 </template>

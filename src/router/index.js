@@ -66,6 +66,11 @@ const routes = [
     name: "Accessibility Notice",
     component: () => import("@/pages/AccessibilityNotice.vue"),
   },
+  {
+    path: "/demo",
+    name: "Demo",
+    component: () => import("@/pages/Demo.vue"),
+  },
 ];
 
 const router = createRouter({

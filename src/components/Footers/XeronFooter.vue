@@ -104,14 +104,24 @@
       <p class="text-[20px] font-naga -tracking-[.4px] text-night mt-12">
         For Patients
       </p>
-      <p
-        @click="openInNewTab(item.url, item.target)"
-        v-for="(item, index) in forPatients"
-        :key="index"
-        class="tracking-[.28px] text-[14px] text-charcoal cursor-pointer"
-      >
-        {{ item.name }}
-      </p>
+      <template v-for="(item, index) in forPatients" :key="index">
+        <router-link
+          class="tracking-[.28px] text-[14px] text-charcoal cursor-pointer"
+          v-if="isInternalLink(item.url)"
+          :to="{ path: item.url }"
+        >
+          {{ item.name }}
+        </router-link>
+        <a
+          v-else
+          :href="item.url"
+          target="_blank"
+          class="tracking-[.28px] text-[14px] text-charcoal cursor-pointer"
+          rel="noopener noreferrer"
+        >
+          {{ item.name }}
+        </a>
+      </template>
     </div>
 
     <div
@@ -143,6 +153,9 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 const openInNewTab = (url, target) => {
   window.open(url, target);
+};
+const isInternalLink = (link) => {
+  return !link.startsWith("http");
 };
 
 const companies = [
@@ -240,8 +253,8 @@ const forPatients = [
   },
   {
     name: "Pay a Bill",
-    url: "/dev",
-    target: "_self",
+    url: "https://secure.cardknox.com/xeronclinicallaboratories",
+    target: "_blank",
   },
   {
     name: "Patient Sign in",
